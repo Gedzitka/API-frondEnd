@@ -1,5 +1,5 @@
 
-
+//vymazání pojištění a klienta
 export default function deleteAll(data) {
     const deleteBtn = document.getElementById("deleteBtn");
     let clientID = window.location.search.split('=')[1]; 
@@ -16,7 +16,7 @@ export default function deleteAll(data) {
  
             deleteBtn.addEventListener("click", (e) => {
               
-                if (confirm('Opravdu chcete smazat klienta?')) {
+                if (confirm('Opravdu chcete smazat klienta i pojištění?')) {
                     axios.delete(`http://localhost:8000/api/assurances/${id}`)&&axios.delete(`http://localhost:8000/api/clients/${clientID}`)
                   .then(() => location.reload())
                  

@@ -1,3 +1,4 @@
+ //odkaz na detail pojištění
  export default function detailAssurence(){
     
     const detail = document.getElementById("detail");

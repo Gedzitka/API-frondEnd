@@ -1,3 +1,5 @@
+
+//mazání klienta
 export default function deleteClient(){
     const deleteBtn = document.querySelectorAll(".btn-danger");
     if (deleteBtn) {

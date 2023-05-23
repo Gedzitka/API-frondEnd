@@ -1,15 +1,11 @@
+//výpis klientů
 import detailClient from "./to-detail-client.js";
 import editClient from "./editClient.js";
 import deleteClient from "./delete-client.js";
 axios.get(`http://localhost:8000/api/clients/`)
     
     .then((res) => {
-        const data = res.data;
-        
-
-
-
-
+        const data = res.data;     
     const clientData = document.getElementById("table");
     let table = ` <thead class="thead-light">
     <tr>
@@ -34,49 +30,21 @@ axios.get(`http://localhost:8000/api/clients/`)
     table += `</tbody>
                 </table>`;
                 clientData.innerHTML = table;
-               
               
-                
-                // const aDetail = document.querySelectorAll("#detail");
-
-            
-//             detailClient=()=>{
-//                 if (aDetail) {
-//                     aDetail.forEach((btn) => {
-//             btn.addEventListener("click", (e) => {
-//             const id = e.target.parentElement.parentElement.id;
-//             console.log(id);
-//             window.location.href = `http://127.0.0.1:5500/client-detail.html?=${id}`;
-
-//             });
-//         });
-//     }
-// }
-    
     detailClient();
-        //         editClient=()=>{
-        //                 if (editBtn) {
-        //                     editBtn.forEach((btn) => {
-        //             btn.addEventListener("click", (e) => {
-        //             const id = e.target.parentElement.parentElement.id;
-        //             console.log(id);
-        //             window.location.href = `http://127.0.0.1:5500/form-edit.html?=${id}`;
-
-        //             });
-        //         });
-        //     }
-        // }
         editClient();
-           
-               
-
-
             deleteClient();
 
             
 
     }
     )
+
+
+            
+
+    
+    
 
 
 

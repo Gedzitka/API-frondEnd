@@ -1,4 +1,4 @@
-
+//editace klienta 
 function putClient(){
     const id = window.location.search.split('=')[1];
     console.log(id);

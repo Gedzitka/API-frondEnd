@@ -1,3 +1,4 @@
+//odeslání klienta
 function postClient(){
 const form = document.getElementById('client-form')
 console.log(form);

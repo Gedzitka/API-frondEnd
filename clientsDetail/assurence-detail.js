@@ -1,7 +1,4 @@
-
-
-
-
+//detail pojištění
 function detailAssurence(){
     const id=window.location.search.split("=")[1];
     axios.get(`http://localhost:8000/api/assurances/${id}`,
@@ -42,7 +39,7 @@ table.innerHTML=
 <td data-label="name"> <a id="client" href="#">${clientFullname}</a></td>
 <td data-label="type">${data.type}</td>
 <td data-label="subject">${data.subjectOfinsurance}</td>
-<td data-label="amount">${data.price}</td>
+<td data-label="amount" >${data.price}.</td>
 <td data-label="from">${data.validFrom}</td>
 <td data-label="to">${data.validTo}</td>
 </tr>

@@ -1,3 +1,4 @@
+//odkaz na editační formulář klienta
 export default function editClient(){
     const editBtn = document.getElementById("btnEdit");
     console.log(editBtn);

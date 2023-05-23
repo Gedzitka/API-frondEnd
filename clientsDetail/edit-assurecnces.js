@@ -1,3 +1,4 @@
+//editace pojištění
 const id = window.location.search.split('=')[1];
 axios.get(`http://localhost:8000/api/clients/${id}`)
       .then((res) => {
@@ -10,47 +11,15 @@ axios.get(`http://localhost:8000/api/clients/${id}`)
       
       let h4=`<h4 id="${client._id}" class="mb-5">${client.firstName} ${client.lastName}</h4> `
       clientName.innerHTML=h4
-      
-      
-      
+           
       })
-// const form = document.getElementById('form')
-// console.log(form);
-// form.addEventListener('submit', (e) => {
-//      e.preventDefault()
-//      ;
-//      const data = new FormData(form)
-//      const dataForm=[...data]
-//      const dataEteries = JSON.stringify(Object.fromEntries(dataForm))
-//      console.log(dataEteries);
-
-//     ;
-     
-//     axios({
-//         method: "post",
-//         url: "http://localhost:8000/api/assurances",
-//         data: dataEteries,
-//         headers: { "Content-Type": "application/json" }
-        
-//     }
-    
-//     )
-//         .then((res) => 
-//             console.log(res + "klient přidán"))
-//             .then( () => window.location.href=`http://127.0.0.1:5500/clients-list.html?id=1`)
-           
-           
-           
-//             .catch((err) =>
-//             console.log(err));
-//       });
+        .catch((err) => console.log(err));
     
 const editAssurances = () => {
     const id = window.location.search.split('=')[1];
 
     axios.get(`http://localhost:8000/api/assurances/${id}`)
       .then((res) => {
-        // const data = res.data.find((item) => item.clientID === id);
         const data = res.data;
         console.log(data);
   
@@ -65,12 +34,6 @@ const editAssurances = () => {
   };
     
 editAssurances();
-
-
-
-
-  
-
     putAssurences=()=>{
  
         const form = document.getElementById('form')
@@ -109,19 +72,12 @@ form.addEventListener('submit', (e) => {
         }
         
         )
- 
-      
-
 
         .catch((err) =>
         console.log(err));
     }
     
     )}
-
-    
-
-
 putAssurences()
       
 

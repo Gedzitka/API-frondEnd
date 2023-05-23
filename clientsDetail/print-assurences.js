@@ -1,3 +1,4 @@
+//vypsání  pojištění klienta
 import deleteAssurences from "./deleteAssurences.js";
 import editAssurence from "./editAssurences.js";
 import deleteAll from "./deleteAll.js";
