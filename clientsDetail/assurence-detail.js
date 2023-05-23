@@ -55,7 +55,7 @@ window.location.href=`http://127.0.0.1:5500/client-detail.html?=${data.clientID}
 
 }
 )
-.catch((error) => console.error(error));
+
 }
 )
 }
