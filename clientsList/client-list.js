@@ -1,4 +1,6 @@
-
+import detailClient from "./to-detail-client.js";
+import editClient from "./editClient.js";
+import deleteClient from "./delete-client.js";
 axios.get(`http://localhost:8000/api/clients/`)
     
     .then((res) => {
@@ -33,65 +35,40 @@ axios.get(`http://localhost:8000/api/clients/`)
                 </table>`;
                 clientData.innerHTML = table;
                
-                const deleteBtn = document.querySelectorAll(".btn-danger");
-                const editBtn = document.querySelectorAll(".btn-warning");
-                const aDetail = document.querySelectorAll("#detail");
+              
+                
+                // const aDetail = document.querySelectorAll("#detail");
 
-                console.log(aDetail);
-                detailClient=()=>{
-                    if (aDetail) {
-                        aDetail.forEach((btn) => {
-                btn.addEventListener("click", (e) => {
-                const id = e.target.parentElement.parentElement.id;
-                console.log(id);
-                window.location.href = `http://127.0.0.1:5500/client-detail.html?=${id}`;
+            
+//             detailClient=()=>{
+//                 if (aDetail) {
+//                     aDetail.forEach((btn) => {
+//             btn.addEventListener("click", (e) => {
+//             const id = e.target.parentElement.parentElement.id;
+//             console.log(id);
+//             window.location.href = `http://127.0.0.1:5500/client-detail.html?=${id}`;
 
-                });
-            });
-        }
-    }
+//             });
+//         });
+//     }
+// }
     
     detailClient();
-                editClient=()=>{
-                        if (editBtn) {
-                            editBtn.forEach((btn) => {
-                    btn.addEventListener("click", (e) => {
-                    const id = e.target.parentElement.parentElement.id;
-                    console.log(id);
-                    window.location.href = `http://127.0.0.1:5500/form-edit.html?=${id}`;
+        //         editClient=()=>{
+        //                 if (editBtn) {
+        //                     editBtn.forEach((btn) => {
+        //             btn.addEventListener("click", (e) => {
+        //             const id = e.target.parentElement.parentElement.id;
+        //             console.log(id);
+        //             window.location.href = `http://127.0.0.1:5500/form-edit.html?=${id}`;
 
-                    });
-                });
-            }
-        }
+        //             });
+        //         });
+        //     }
+        // }
         editClient();
            
-                deleteClient=()=>{
-                if (deleteBtn) {
-                    deleteBtn.forEach((btn) => {
-                        btn.addEventListener("click", (e) => {
-                            let id = e.target.parentElement.parentElement.id;
-                          
-                            sessionStorage.setItem('id', id);
-                            if (confirm('Opravdu chcete smazat klienta?')) {
-                                axios.delete(`http://localhost:8000/api/clients/${id}`)
-                               
-                                .then(client => console.log(client + "deleted"	))
-                                .then(() => location.reload())
-
-                                .catch(error => console.error(error))
-                            }
-
-
-                        });
-
-
-
-                    });
-
-                }
-
-            }
+               
 
 
             deleteClient();

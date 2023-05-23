@@ -1,3 +1,4 @@
+function postClient(){
 const form = document.getElementById('client-form')
 console.log(form);
 form.addEventListener('submit', (e) => {
@@ -28,3 +29,5 @@ form.addEventListener('submit', (e) => {
             .catch((err) =>
             console.log(err));
       });
+    }
+    postClient();
