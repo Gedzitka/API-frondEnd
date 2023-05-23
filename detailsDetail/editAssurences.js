@@ -1,5 +1,7 @@
 export default function editAssurence(){
+    
     const editBtn = document.getElementById("btn-edit");
+    console.log(editBtn);
      editBtn.addEventListener("click", (e) => {
                 let id = e.target.parentElement.parentElement.id;
                 console.log(id);
@@ -10,4 +12,3 @@ export default function editAssurence(){
 
             });
         }
-     

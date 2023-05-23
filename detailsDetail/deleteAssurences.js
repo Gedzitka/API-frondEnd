@@ -1,5 +1,7 @@
      export default function deleteAssurences(){
         const deleteBtn = document.getElementById("btn-delete");
+       
+        console.log(deleteBtn);
                 deleteBtn.addEventListener("click", (e) => {
                     let id = e.target.parentElement.parentElement.id;
                 console.log(id);

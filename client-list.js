@@ -50,6 +50,7 @@ axios.get(`http://localhost:8000/api/clients/`)
             });
         }
     }
+    
     detailClient();
                 editClient=()=>{
                         if (editBtn) {
